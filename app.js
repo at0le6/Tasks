@@ -2,15 +2,15 @@ const express = require('express');
 const app = express();
 const tasks = require('./routes/tasks');
 const connectDB = require('./bd/connect');
+const notFound = require('./middleware/not-found')
 require('dotenv').config();
 const cors = require('cors')
 app.use(cors())
 
-app.get('/hello', (req, res) => {
-    res.send('Task manager App');
-});
-//Middleware
+app.use(express.static('./public'))
+    //Middleware
 app.use(express.json());
+app.use(notFound);
 //Routes
 app.use('/api/v1/tasks', tasks);
 
