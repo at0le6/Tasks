@@ -1,7 +1,7 @@
 # Tasks App
 App where im using node, mongo DB and express to send data of our own task.
 ## Installation
-Usage of npm manager if you dont have node install please install [node](https://nodejs.org/es/) to start.
+Usage of npm manager if you dont have node install please install [node](https://nodejs.org/es/) to start then.
 ```bash
 npm install
 ```
